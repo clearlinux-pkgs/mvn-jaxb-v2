@@ -4,11 +4,12 @@
 #
 Name     : mvn-jaxb-v2
 Version  : 2.2.10
-Release  : 2
+Release  : 3
 URL      : https://github.com/javaee/jaxb-v2/archive/jaxb-2_2_10.tar.gz
 Source0  : https://github.com/javaee/jaxb-v2/archive/jaxb-2_2_10.tar.gz
 Source1  : https://repo1.maven.org/maven2/com/sun/xml/bind/mvn/jaxb-bundles/2.2.11/jaxb-bundles-2.2.11.pom
 Source2  : https://repo1.maven.org/maven2/com/sun/xml/bind/mvn/jaxb-parent/2.2.11/jaxb-parent-2.2.11.pom
+Source3  : https://repo1.maven.org/maven2/org/glassfish/jaxb/jaxb-bom/2.2.11/jaxb-bom-2.2.11.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-1.1 Apache-2.0 BSD-3-Clause CDDL-1.1 GPL-2.0 MIT
@@ -62,6 +63,9 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/com/sun/xml/bind/mvn/ja
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/sun/xml/bind/mvn/jaxb-parent/2.2.11
 cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/com/sun/xml/bind/mvn/jaxb-parent/2.2.11/jaxb-parent-2.2.11.pom
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/glassfish/jaxb/jaxb-bom/2.2.11
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/glassfish/jaxb/jaxb-bom/2.2.11/jaxb-bom-2.2.11.pom
+
 
 %files
 %defattr(-,root,root,-)
@@ -70,6 +74,7 @@ cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/com/sun/xml/bind/mvn/ja
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/com/sun/xml/bind/mvn/jaxb-bundles/2.2.11/jaxb-bundles-2.2.11.pom
 /usr/share/java/.m2/repository/com/sun/xml/bind/mvn/jaxb-parent/2.2.11/jaxb-parent-2.2.11.pom
+/usr/share/java/.m2/repository/org/glassfish/jaxb/jaxb-bom/2.2.11/jaxb-bom-2.2.11.pom
 
 %files license
 %defattr(0644,root,root,0755)
